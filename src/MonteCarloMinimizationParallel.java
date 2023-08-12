@@ -71,8 +71,13 @@ class MonteCarloMinimizationParallel{
 
 class Multithreader extends RecursiveAction {
 
+    public Multithreader(){
+
+    }
+
     @Override
     protected void compute() {
+
 
     }
 }
