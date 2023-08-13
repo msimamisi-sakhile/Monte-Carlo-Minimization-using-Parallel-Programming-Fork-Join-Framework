@@ -38,14 +38,20 @@ class MonteCarloMinimization{
     		System.out.println("Incorrect number of command line arguments provided.");   	
     		System.exit(0);
     	}
-    	/* Read argument values */
-    	rows =Integer.parseInt( args[0] );
-    	columns = Integer.parseInt( args[1] );
-    	xmin = Double.parseDouble(args[2] );
-    	xmax = Double.parseDouble(args[3] );
-    	ymin = Double.parseDouble(args[4] );
-    	ymax = Double.parseDouble(args[5] );
-    	searches_density = Double.parseDouble(args[6] );
+    	
+	// Accepts user arguments
+        Scanner scannerInput = Scanner(System.in);
+	System.out.println("Please enter your arguments [Seperate arguments with a space] ");
+        String [] argz = scannerInput.nextLine().split(" ");
+	    
+	/* Read argument values */
+    	rows =Integer.parseInt( argz[0] );
+    	columns = Integer.parseInt( argz[1] );
+    	xmin = Double.parseDouble(argz[2] );
+    	xmax = Double.parseDouble(argz[3] );
+    	ymin = Double.parseDouble(argz[4] );
+    	ymax = Double.parseDouble(argz[5] );
+    	searches_density = Double.parseDouble(argz[6] );
   
     	if(DEBUG) {
     		/* Print arguments */
