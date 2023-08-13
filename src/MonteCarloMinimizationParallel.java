@@ -34,13 +34,18 @@ class MonteCarloMinimizationParallel {
             System.exit(0);
         }*/
         /* Read argument values */
-        rows =Integer.parseInt( "10" );
-        columns = Integer.parseInt( "10" );
-        xmin = Double.parseDouble("1" );
-        xmax = Double.parseDouble("10000" );
-        ymin = Double.parseDouble("1" );
-        ymax = Double.parseDouble("10000" );
-        searches_density = Double.parseDouble("50000");
+
+        // Accepts user arguments
+        Scanner scannerInput = Scanner(System.in);
+        String [] argz = scannerInput.nextLine().split(" ");
+        
+        rows =Integer.parseInt( argz[0] );
+        columns = Integer.parseInt( argz[1] );
+        xmin = Double.parseDouble( argz[2] );
+        xmax = Double.parseDouble( argz[3] );
+        ymin = Double.parseDouble( argz[4] );
+        ymax = Double.parseDouble( argz[5] );
+        searches_density = Double.parseDouble( argz[6]);
 
         if(DEBUG) {
             /* Print arguments */
