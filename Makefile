@@ -1,18 +1,26 @@
-JAVAC=/usr/bin/javac
-.SUFFIXES: .java .class
-SRCDIR=src
-BINDIR=bin
+# Define compiler variables and jflags
+JAVAC = /usr/bin/javac
+JFLAGS = -d .
 
-$(BINDIR)/%.class:$(SRCDIR)/%.java
-	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
+# Src directory and Bin directory
+SRCDIR = MonteCarloMini/MonteCarloMinimization.java \ MonteCarloMini/MonteCarloMinimizationParallel.java \ MonteCarloMini/Search.java \ MonteCarloMini/TerrainArea.java \
+CLASS_FILES = MonteCarloMini/MonteCarloMinimization.class \ MonteCarloMini/MonteCarloMinimizationParallel.class \ MonteCarloMini/Search.class \ MonteCarloMini/TerrainArea.class \
 
-CLASSES=TerrainArea.class Search.class MonteCarloMinimization.class
-CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
+# Compile Java code
+$(CLASS_FILES): $(SRCDIR)
+	$(JAVAC) $(JFLAGS) $(SRCDIR)
 
+# Default target
 default: $(CLASS_FILES)
 
+# Clean the compiled files
 clean:
-	rm $(BINDIR)/*.class
+	rm -f $(CLASS_FILES)
 
-run:	$(CLASS_FILES)
-	java -cp $(BINDIR) helloWorld
+# Run the Serial program
+runSerialMonteCarlo: $(CLASS_FILES)
+	java MonteCarloMini.MonteCarloMinimization
+
+# Run the Parallel program
+runParallelMonteCarlo: $(CLASS_FILES)
+	java MonteCarloMini.MonteCarloMinimizationParallel 
