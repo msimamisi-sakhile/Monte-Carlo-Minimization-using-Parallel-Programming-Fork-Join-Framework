@@ -34,3 +34,9 @@ runSerialMonteCarlo: $(CLASS_FILES)
 # Run the Parallel program
 runParallelMonteCarlo: $(CLASS_FILES)
         java MonteCarloMini.MonteCarloMinimizationParallel
+runSerialMonteCarlo: $(CLASS_FILES)
+        java MonteCarloMini.MonteCarloMinimization
+
+# Run the Parallel program
+runParallelMonteCarlo: $(CLASS_FILES)
+        java MonteCarloMini.MonteCarloMinimizationParallel
