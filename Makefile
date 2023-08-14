@@ -23,9 +23,8 @@ $(CLASS_FILES): $(SRC_FILES)
 # Default target
 default: $(CLASS_FILES)
 
-# Deletes all compiles class files
 clean:
-            rm -f $(CLASS_FILES)
+        rm -f $(CLASS_FILES)
 
 # Run the Serial program
 runSerialMonteCarlo: $(CLASS_FILES)
