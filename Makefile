@@ -9,12 +9,12 @@ SRC_FILES = MonteCarloMini/MonteCarloMinimization.java \
             MonteCarloMini/TerrainArea.java \
 
 CLASS_FILES = MonteCarloMini/MonteCarloMinimization.class \
-              MonteCarloMini/MonteCarloMinimizationParallel.class \
-              MonteCarloMini/SearchMultithreader.class \
-              MonteCarloMini/Search.class \
-              MonteCarloMini/'Search$$Direction.class' \
-              MonteCarloMini/'Search$$1.class' \
-              MonteCarloMini/TerrainArea.class \
+            MonteCarloMini/MonteCarloMinimizationParallel.class \
+            MonteCarloMini/SearchMultithreader.class \
+            MonteCarloMini/Search.class \
+            MonteCarloMini/'Search$$Direction.class' \
+            MonteCarloMini/'Search$$1.class' \
+            MonteCarloMini/TerrainArea.class \
 
 # Instruction to compile code from .java files to .class files
 $(CLASS_FILES): $(SRC_FILES)
