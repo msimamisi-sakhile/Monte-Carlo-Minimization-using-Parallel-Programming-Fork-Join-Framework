@@ -36,7 +36,7 @@ class MonteCarloMinimizationParallel {
         /* Read argument values */
 
         // Accepts user arguments
-        Scanner scannerInput = Scanner(System.in);
+        Scanner scannerInput = new Scanner(System.in);
         System.out.println("Please enter your arguments [Seperate arguments with a space] ");
         String [] argz = scannerInput.nextLine().split(" ");
         
