@@ -33,12 +33,12 @@ class MonteCarloMinimization{
      	int num_searches;		// Number of searches
     	Search [] searches;		// Array of searches
     	Random rand = new Random();  //the random number generator
-    	
+    	/*
     	if (args.length!=7) {  
     		System.out.println("Incorrect number of command line arguments provided.");   	
     		System.exit(0);
     	}
-    	
+    	*/
 	// Accepts user arguments
         Scanner scannerInput = Scanner(System.in);
 	System.out.println("Please enter your arguments [Seperate arguments with a space] ");
